@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* لون خلفية ناعم */
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 100%;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* لون أبيض */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تحسين المظهر */
+}
+.continer .header {
+    background-color: #004aad; /* أزرق داكن */
+    color: rgb(23, 89, 189);
+    width: 100%;
+   box-shadow: 2px 2px 4px 2px rgb(0, 0, 0,0.4);
+    padding: 10px 20px;
+}
+.nav {
+    margin-left: 140px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    margin-right: 60px;
+    margin-top: 65px;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 8px;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+ul li a:hover {
+    color: #ffdd00; /* أصفر مميز عند التمرير */
+}
+.caption {
+    font-size: 28px;
+    color: #004aad; /* أزرق داكن */
+    text-align: center;
+    margin-top: 20px;
+}
+.main .table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.main .table table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: center;
+    background-color: #e7f3ff; /* خلفية أزرق فاتح */
+    border: 1px solid #d0e4f7;
+}
+table th {
+    background-color: #004aad; /* خلفية عناوين الجدول */
+    color: white;
+    padding: 10px;
+}
+table tr {
+    border: 1px solid #d0e4f7;
+    transition: background-color 0.3s;
+}
+table tr:hover {
+    background-color: #cce7ff; /* لون أفتح عند التمرير */
+}
+table td {
+    padding: 10px;
+    color: #333; /* نص غامق */
+}
+.convert {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+           align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.Dol img{
+    margin-top: ;
+}
+.convert input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d0e4f7;
+    border-radius: 5px;
+    height: 50px;
+    width: 500px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.convert button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 200px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.convert button:hover {
+    background-color: #003580; /* أزرق داكن أكثر */
+}
+.result input {
+    padding: 10px;
+    font-size: 30px;
+    border: 1px solid #d0e4f7;
+    border-radius: 5px;
+    width: 500px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="continer">
+<div class="header">
+
+<div class="nav">
+    <div class="logo"><img src="trans_bg.png" alt="logo"width="150px"></div>
+<ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">MORE</a></li>
+    <li><a href="#">CALL US</a></li>
+</ul>
+</div>
+</div>
+<div class="main">
+    <h1 class="caption">اسعار صرف العملات اليوم</h1>
+<div class="table">
+    
+    
+<table border="1">
+<thead>
+<th>Currency</th>
+<th>Currency Symbol</th>
+<th>Buy</th>
+<th>Sell</th>
+</thead>
+<tbody>
+<tr>
+    <td>Us Dollar</td>
+    <td>USD</td>
+    <td>15150</td>
+    <td>15000</td>
+</tr>
+
+<tr>
+    <td>EURO</td>
+    <td>EUR</td>
+    <td>15918.10</td>
+    <td>15760</td>
+</tr>
+
+<tr>
+    <td>STRLING POUND</td>
+    <td>GBP</td>
+    <td>19202</td>
+    <td>19012.50</td>
+</tr>
+
+<tr>
+    <td>SAUDI RIYAL</td>
+    <td>SAR</td>
+    <td>4012.35</td>
+    <td>4032.54</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="convert">
+
+<div class="Dol">
+
+    <input type="number" placeholder="Dollar" id="dol">
+    <img src="usa.svg.png" alt="" width="75px">
+</div>
+<div class="syr">
+<input type="number" placeholder="Syria Pound" id="ssr" >
+<img src="Syr.svg.png" alt="" width="75px">
+</div>
+<button>Convert</button>
+<div class="result">
+    <input type="numebr" placeholder="Result" >
+    <img src="Syr.svg.png" alt="" width="75px">
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+let but=document.querySelector("button")
+let sr=document.getElementById('ssr')
+let res=document.querySelector('.result input')
+let dol= document.querySelector('.Dol input')
+console.log(res)
+
+but.onclick=function(){
+res.value=dol.value * sr.value;
+sr.value="";
+dol.value=""
+}
+    /*
+let arr=[1,-5,5,-7,10,-100]
+let arr1=arr.map(function(elm){
+return elm>0 ?(-1)*elm :elm*(-1)
+})
+console.log(arr1)
+
+let frinds=["Ahmed","Mazero","Elham","Osama","Gamal","Ameer"]
+
+let ff=frinds[2].slice(0,2).toUpperCase() +frinds[1].slice(2).toUpperCase()
+console.log(ff[4]+ff[5].toLocaleLowerCase())
+
+setTimeout(()=>{
+console.log("good")
+},2000)
+
+let Admins=["Ahmed","Osama","Sayad","Stop","Samera"];
+let myEmployees=["Amjad","Samah","Ameer","Omar","Othman","Amany","Samia"];
+console.log(myEmployees[1][0]===Admins[2][0])
+let i=0;
+let k=0;
+
+while(Admins[i]!="Stop"){
+i++;
+}
+
+document.write(`<div class='hh'>We have ${i} Admins</div>`)
+
+
+while(Admins[k]!="Stop"){
+    document.write('<hr>')
+    document.write(`<h3>The Admin For Team ${k+1} Is ${Admins[k]}</h3>`);
+
+for(let c=0;c<myEmployees.length;c++){
+    if(myEmployees[c][0]==Admins[k][0]){
+document.write(`
+
+<h3>${ (c+1)+'-'+myEmployees[c]}</h3>
+
+`)
+}
+
+}
+
+
+    k++;
+}
+
+let ss='I Love Foood Code Too Playing Much';
+let ss1=ss.split(" ").filter(function(elm){
+    return elm.length>4 
+})
+
+console.log(ss1);
+
+let mix ="A13BS2ZX";
+let mix2=mix.split("").map(function(lm){
+return !isNaN(parseInt(lm))? lm:" "
+
+}).filter(function(arr,cur){
+    return arr*cur
+})
+console.log(mix2);
+*/
+/*
+
+let ff=frinds.map(function(elm){
+return elm[0]=='A'?elm:""
+
+})
+console.log(ff)
+
+let EF="I Love Foood Code Tooo Playing Much"
+EE=EF.split(" ").filter(function(elm){
+    return elm.length> 4
+})
+console.log(EE)
+
+
+let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+let mixs=mix.map(function(elm){
+return isNaN(parseInt(elm)) ?elm:''
+}).join('')
+console.log(mixs)
+
+let copy=new Object();
+copy.living=true;
+copy.age=20;
+copy.name="hamza";
+console.log(copy);
+
+var person=function(name,live,age,gender){
+this.age=age;
+this.name=name;
+this.live=live;
+this.getg=function(gender){
+    return gender;
+}
+let c=new person('hamza',true,20,'male');
+console.log(c)
+
+
+}
+let car={
+    name:'Mazda',
+type:'sport',
+model:2024,
+weight:'890kg',
+color:'red'
+}
+car.name='Kia'
+console.log(car.name)
+*/
+
+</script>
+
+</body>
+</html>
